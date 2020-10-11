@@ -1,10 +1,29 @@
 {
-  "name": "Median",
-  "description": "Return the medium value of a cell",
-  "tags": ["basic statistics"],
+  "name": "GSEA",
+  "description": "Gene Set Enrichment Analysis",
+  "tags": ["bioinformatics"],
   "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/template_operator"],
-  "properties": []
+  "urls": ["https://github.com/tercen/gsea_operator"],
+  "properties": [
+   {
+    "kind": "StringProperty",
+    "name": "min_size",
+    "defaultValue": "10",
+    "description": "minimal size of a gene set to be considered in the analysis (default: 10)"
+  },
+  {
+    "kind": "StringProperty",
+    "name": "max_size",
+    "defaultValue": "500",
+    "description": "maximal size of a gene set to be considered in the analysis (default: 500)"
+  },
+  {
+    "kind": "StringProperty",
+    "name": "n_perm",
+    "defaultValue": "1000",
+    "description": "number of permutations (default: 1000)"
+  }
+  ]
 }
 
 

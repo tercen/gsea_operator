@@ -1,34 +1,38 @@
-# Introduction
+# Gene Set Enrichment Analysis operator
 
-This is a template repository.
+##### Description
 
-Use this template repository during the first step of developing a tercen operator (in R) on github.
+`gsea` operator performs a Gene Set Enrichment Analysis (GSEA).
 
-An overview of steps for developing an operator are:
+##### Usage
 
-1. create a github repo
-2. install tercen_studio
-3. login to tercen_studio
-4. git clone the newly created repo
-5. start developing in R in tercen_studio
-6. add R packages to the repo
-7. push to the github repo
-8. go to tercen and install the operator
+Input projection|.
+---|---
+`y-axis`     | numeric, measurement (e.g. normalized gene expression value) 
+`row`        | factor, gene set
+`col`        | factor, gene name
 
-For step 1, when creating the repo on github, you will notice the option to use a template repository, choose the `templateR_operator` repository and select it as the template repository.
+Properties|.
+---|---
+`min_size`     | numeric, minimal size of a gene set to be considered in the analysis (default: 10)
+`max_size`     | numeric, maximal size of a gene set to be considered in the analysis (default: 500)
+`n_perm`     | numeric, number of permutations (default: 1000)
 
-After creation, you now have a new repository with all the convenient files for making a new operator (in R) for tercen.
+Output relations|.
+---|---
+`pval`        | numeric, p-value of the test
+`padj`        | numeric, adjusted p-value of the test
+`ES`        | numeric, enrichment score
+`NES`        | numeric, normalised enrichment score
 
-Use `tercen_studio` to clone the new repository and start programming in `tercen_studio`
+##### Details
 
-it includes the skeleton files 
+##### References
 
-* `main.R`
-* `workspace.R`
-* `operator.json`
-* `README_template.md`
-* `doc` directory
+This operator is a wrapper of the `fgsea` function from the `fgsea` [R/Bioconductor package](http://bioconductor.org/packages/release/bioc/html/fgsea.html).
 
-please remember to change the `README_template.md` to  `README.template.md`
+See [GSEA on Wikipedia](https://en.wikipedia.org/wiki/Gene_set_enrichment_analysis).
 
-inside the `doc` there is a `dev_commands.md` file which contains useful development command lines.
+##### See Also
+
+[read_gmt_operator](https://github.com/tercen/read_gmt_operator)
