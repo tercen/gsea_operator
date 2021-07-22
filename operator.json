@@ -1,6 +1,6 @@
 {
   "name": "GSEA",
-  "description": "Gene Set Enrichment Analysis",
+  "description": "Gene Set Enrichment Analysis: Evaluates microarray data at the level of gene expression sets to find statistically significant genes based on biologically relevant differances.",
   "tags": ["bioinformatics"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/gsea_operator"],
