@@ -33,6 +33,7 @@ df_fgsea <- fgsea(
 )
 
 df_out <- df_fgsea %>% select(pathway, pval, padj, ES, NES) %>%
-  mutate(.ri = as.numeric(pathway)) %>% select(-pathway) %>%
+  mutate(.ri = as.integer(as.numeric(pathway))) %>% 
+  select(-pathway) %>%
   ctx$addNamespace() %>%
   ctx$save()
