@@ -8,7 +8,9 @@ ctx <- tercenCtx()
 
 min_size <- ctx$op.value('min_size', as.double, 10)
 max_size <- ctx$op.value('max_size', as.double, 500)
-
+seed <- ctx$op.value('seed', as.double, 42)
+if(seed > 0) set.seed(seed)
+  
 df <- ctx %>% select(.ri, .ci, .y)
 
 df_to_list <- df[, c(".ri", ".ci")]

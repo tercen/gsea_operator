@@ -6,22 +6,22 @@
   "urls": ["https://github.com/tercen/gsea_operator"],
   "properties": [
    {
-    "kind": "StringProperty",
+    "kind": "DoubleProperty",
     "name": "min_size",
-    "defaultValue": "10",
-    "description": "minimal size of a gene set to be considered in the analysis (default: 10)"
+    "defaultValue": 10,
+    "description": "Minimal size of a gene set to be considered in the analysis (default: 10)"
   },
   {
-    "kind": "StringProperty",
+    "kind": "DoubleProperty",
     "name": "max_size",
-    "defaultValue": "500",
-    "description": "maximal size of a gene set to be considered in the analysis (default: 500)"
+    "defaultValue": 500,
+    "description": "Maximal size of a gene set to be considered in the analysis (default: 500)"
   },
   {
-    "kind": "StringProperty",
-    "name": "n_perm",
-    "defaultValue": "1000",
-    "description": "number of permutations (default: 1000)"
+    "kind": "DoubleProperty",
+    "name": "seed",
+    "defaultValue": -1,
+    "description": "Random seed for result reproducibility (default -1 will be ignored.)"
   }
   ]
 }
