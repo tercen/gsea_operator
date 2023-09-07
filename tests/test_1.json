@@ -1,0 +1,20 @@
+{
+  "kind": "OperatorUnitTest",
+  "name": "test_1",
+  "namespace": "ds100",
+  "inputDataUri": "test_1_in.csv",
+  "outputDataUri": ["test_1_out_1.csv", "test_1_out_3.csv"],
+  "columns": [
+    "ds0.set_genes"
+  ],
+  "rows": ["ds0.set_name"],
+  "colors": [
+    "js0.ds40.log2FoldChange"
+  ],
+  "labels": [],
+  "yAxis": "y_values",
+  "xAxis": "",
+  "generatedOn": "09/07/2023 05:11:17 AM 2023",
+  "version": "",
+  "absTol": 1e-05
+}

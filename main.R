@@ -1,15 +1,13 @@
-library(tercen)
-library(dplyr)
-library(fgsea)
+suppressPackageStartupMessages({
+  library(tercen)
+  library(dplyr)
+  library(fgsea)
+})
 
 ctx <- tercenCtx()
 
-min_size <- 10
-if(!is.null(ctx$op.value('min_size'))) min_size <- as.numeric(ctx$op.value('min_size'))
-max_size <- 500
-if(!is.null(ctx$op.value('max_size'))) max_size <- as.numeric(ctx$op.value('max_size'))
-n_perm <- 1000
-if(!is.null(ctx$op.value('n_perm'))) n_perm <- as.numeric(ctx$op.value('n_perm'))
+min_size <- ctx$op.value('min_size', as.double, 10)
+max_size <- ctx$op.value('max_size', as.double, 500)
 
 df <- ctx %>% select(.ri, .ci, .y)
 
@@ -28,11 +26,11 @@ df_fgsea <- fgsea(
   pathways = set_list, 
   stats    = rank_list,
   minSize  = min_size,
-  maxSize  = max_size,
-  nperm = n_perm
+  maxSize  = max_size
 )
 
-df_out <- df_fgsea %>% select(pathway, pval, padj, ES, NES) %>%
+df_fgsea %>%
+  select(pathway, pval, padj, ES, NES) %>%
   mutate(.ri = as.integer(as.numeric(pathway))) %>% 
   select(-pathway) %>%
   ctx$addNamespace() %>%
