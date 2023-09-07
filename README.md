@@ -16,7 +16,7 @@ Properties|.
 ---|---
 `min_size`     | numeric, minimal size of a gene set to be considered in the analysis (default: 10)
 `max_size`     | numeric, maximal size of a gene set to be considered in the analysis (default: 500)
-`n_perm`     | numeric, number of permutations (default: 1000)
+`seed`     | numeric, random seed (default is -1 and will be ignored)
 
 Output relations|.
 ---|---
@@ -24,8 +24,6 @@ Output relations|.
 `padj`        | numeric, adjusted p-value of the test
 `ES`        | numeric, enrichment score
 `NES`        | numeric, normalised enrichment score
-
-##### Details
 
 ##### References
 
