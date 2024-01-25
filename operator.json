@@ -1,6 +1,6 @@
 {
   "name": "GSEA",
-  "description": "Gene Set Enrichment Analysis: Evaluates microarray data at the level of gene expression sets to find statistically significant genes based on biologically relevant differances.",
+  "description": "Tests whether some gene sets are significantly enriched for a given outcome using Gene Set Enrichment Analysis.",
   "tags": [
     "statistical testing",
     "omics"
