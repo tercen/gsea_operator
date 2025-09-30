@@ -1,6 +1,6 @@
 {
-  "name": "GSEA",
-  "description": "Tests whether some gene sets are significantly enriched for a given outcome using Gene Set Enrichment Analysis.",
+  "name": "GSEA / ORA",
+  "description": "Tests whether some gene sets are significantly enriched for a given outcome using Gene Set Enrichment Analysis or Over-Representation Analysis.",
   "tags": [
     "statistical testing",
     "omics"
@@ -29,6 +29,16 @@
       "name": "seed",
       "defaultValue": -1,
       "description": "Random seed for result reproducibility (default -1 will be ignored.)"
+    },
+    {
+      "kind": "CategoricalProperty",
+      "name": "method",
+      "defaultValue": "GSEA",
+      "description": "The analysis method to perform.",
+      "values": [
+        "GSEA",
+        "ORA"
+      ]
     }
   ],
   "operatorSpec": {
