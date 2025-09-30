@@ -31,7 +31,7 @@
       "description": "Random seed for result reproducibility (default -1 will be ignored.)"
     },
     {
-      "kind": "CategoricalProperty",
+      "kind": "EnumeratedProperty",
       "name": "method",
       "defaultValue": "GSEA",
       "description": "The analysis method to perform.",
