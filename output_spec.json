@@ -1,0 +1,23 @@
+{
+  "outputSpecs": [{
+    "kind": "OperatorJoinSpec",
+    "joinOperators": [{
+      "kind": "JoinOperator",
+      "joinType": "left",
+      "leftPair": {
+        "kind": "ColumnPair",
+        "lColumns": ["Gene Set"],
+        "rColumns": ["Gene Set"]
+      },
+      "rightRelation": {
+        "kind": "TableRelation",
+        "attributes": [
+          {"kind": "Attribute", "name": "pval", "type": "double"},
+          {"kind": "Attribute", "name": "padj", "type": "double"},
+          {"kind": "Attribute", "name": "ES", "type": "double"},
+          {"kind": "Attribute", "name": "NES", "type": "double"}
+        ]
+      }
+    }]
+  }]
+}
