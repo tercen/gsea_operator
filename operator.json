@@ -77,7 +77,7 @@
               {
                 "kind": "MetaFactor",
                 "name": "Measurement",
-                "type": "numeric",
+                "type": "double",
                 "description": "Measurement values (e.g., normalized gene expression value)",
                 "ontologyMapping": "measurement",
                 "crosstabMapping": "y",
